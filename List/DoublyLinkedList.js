@@ -82,6 +82,9 @@ class DoublyLinkedList extends LinkedList {
   }
 
   removeAt(index) {
+    if (this.isEmpty()) {
+      return false
+    }
     if (index >= 0 && index < this.count) {
       let current = this.head
       if (index === 0) {

@@ -1,59 +1,10 @@
 /**
- * 栈：后进先出 此处进行了两种实现形式
- * 1、数组的实现形式
- * 2、对象的实现形式
+ * 栈：后进先出 此处是对象的实现方式
  */ 
-class StackArray {
-  constructor(props) {
-    this.items =  []
-    if (props && Array.isArray(props)) {
-      this.items = props
-      this.count = props.length
-    } else if (props && !Array.isArray(props)) {
-      throw(new Error('param need array'))
-    }
-  }
-
-  get size() {
-    return this.items.length
-  }
-  // size () {
-  //   return this.count
-  // }
-  pop() {
-    if (this.isEmpty()) {
-      return undefined
-    }
-    return this.items.pop()
-  }
-  push(item) {
-    this.items.push(item)
-  }
-  peek() {
-    if (this.isEmpty()) {
-      return undefined
-    }
-    return this.items[this.size - 1]
-  }
-  clear() {
-    this.items = []
-  }
-  isEmpty() {
-    return this.size === 0
-  }
-}
-
-// const a = new StackArray()
-// a.push('a')
-// a.push('b')
-// console.log(a.size);
-// console.log(a.peek());
-// console.log(a.pop(), a);
-
-class StackObj {
+class Stack {
   constructor (props) {
     if (props) {
-      if (props instanceof StackObj) {
+      if (props instanceof Stack) {
         this.count = props.count
         this.items = props.items
       } else {
@@ -107,16 +58,16 @@ class StackObj {
   }
 }
 
-const t = new StackObj()
+const t = new Stack()
 t.push('a')
 t.push('b')
 t.push('c')
-const t2 = new StackObj()
+const t2 = new Stack()
 console.log(t2);
 
 
 function tenToTwo(num) {
-  const remStack = new StackObj()
+  const remStack = new Stack()
   let n = num
   while (n !== 0) {
     let rem = Math.floor(n % 2)
@@ -138,7 +89,7 @@ function baseConverter(num, base) {
   if (base < 2 || base > 36) {
     return ''
   }
-  const remStack = new StackObj()
+  const remStack = new Stack()
   const digits = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'
   let n = num
   while (n > 0) {

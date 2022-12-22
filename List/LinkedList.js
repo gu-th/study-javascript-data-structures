@@ -54,7 +54,7 @@ class LinkedList {
   /**
    * 返回指定位置的元素
    * @param {Number} index
-   * @returns
+   * @returns {Node} node
    */
   getElementAt(index) {
     if (index >= 0 && index <= this.count) {
