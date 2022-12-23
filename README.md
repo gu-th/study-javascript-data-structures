@@ -16,6 +16,8 @@ study-javascript-data-structures
 │  ├─ CircularLinkedList.js - 单向循环链表
 │  ├─ DoublyLinkedList.js - 双向链表
 │  └─ LinkedList.js - 单向链表
+│  └─ SortedLinkedList.js - 有序链表
+│  └─ StackLinkedList.js - 栈的链表实现
 ├─ Queue
 │  ├─ Deque.js - 双向队列
 │  └─ Queue.js - 单向队列
