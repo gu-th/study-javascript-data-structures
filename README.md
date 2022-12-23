@@ -21,6 +21,8 @@ study-javascript-data-structures
 ├─ Queue
 │  ├─ Deque.js - 双向队列
 │  └─ Queue.js - 单向队列
+├─ Set
+│  └─ Set.js - 集合
 ├─ README.md
 ├─ Stack
 │  ├─ Stack.js - 栈 （对象实现）
