@@ -1,4 +1,3 @@
-// const DoublyNode = require('../utils/models')
 const { Node } = require('../utils/models')
 const { defaultEquals } = require('../utils/utils')
 const LinkedList = require('./LinkedList')
@@ -25,20 +24,20 @@ class CircularLinkedList extends LinkedList {
   }
 
   insert(el, index) {
-    const node = new Node(el)
-    if (this.count === 0) {
-      this.head = node
-      node.next = node
-      this.count ++
-      return true
-    }
     if (index >= 0 && index <= this.count) {
+      const node = new Node(el)
       let current = this.head
       if (index === 0) {
-        const tail = this.getElementAt(this.count - 1)
-        this.head = node
-        node.next = current
-        tail.next = node
+        if (this.head == null) {
+          this.head = node
+          node.next = this.head
+        } else {
+          node.next = current
+          // p112 6.3.1 书中此行代码 `current = this.getElementAt(this.count - 1)` 是错误的
+          current = this.getElementAt(this.count - 1)
+          current.next = node
+          this.head = node 
+        }
       } else {
         const pre = this.getElementAt(index - 1)
         current = pre.next
@@ -55,14 +54,16 @@ class CircularLinkedList extends LinkedList {
     if (this.isEmpty()) {
       return undefined
     }
-    if (index >= 0 && index <= this.count) {
+    if (index >= 0 && index < this.count) {
       let current = this.head
       if (index === 0) {
         if (this.count === 1) {
           this.head = undefined
         } else {
+          // p113 6.3.2 `current = this.getElementAt(this.size())` 代码是错误的
           const pre = this.getElementAt(this.count - 1)
           pre.next = current.next
+          this.head = current.next
         }
       } else {
         const pre = this.getElementAt(index - 1)
@@ -81,11 +82,8 @@ c.push('a')
 c.push('b')
 c.push('c')
 c.insert('f', 0)
-// console.log(c.toString());
 c.insert('e', 4)
-// console.log(c.toString());
-console.log(c.removeAt(0));
 console.log(c.toString());
-// c.removeAt(3)
-// console.log(c.toString());
-// console.log(new CircularLinkedList())
+console.log('removed:', c.removeAt(0).element)
+console.log('removed:', c.removeAt(3).element);
+console.log(c.toString());
