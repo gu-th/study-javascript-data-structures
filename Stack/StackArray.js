@@ -1,3 +1,11 @@
+/*
+ * @Author       : guth
+ * @Date         : 2022-12-23 09:34:09
+ * @LastEditors  : guth
+ * @LastEditTime : 2022-12-23 11:00:36
+ * @FilePath     : /study-javascript-data-structures/Stack/StackArray.js
+ * @Description  : 栈-后进先出 （数组实现方式）
+ */
 /**
  * 栈：后进先出 此处是数组的实现方式
  */ 

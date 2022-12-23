@@ -1,3 +1,11 @@
+/*
+ * @Author       : guth
+ * @Date         : 2022-12-22 17:32:21
+ * @LastEditors  : guth
+ * @LastEditTime : 2022-12-23 10:58:33
+ * @FilePath     : /study-javascript-data-structures/List/DoublyLinkedList.js
+ * @Description  : 双向链表实现
+ */
 const { DoublyNode } = require('../utils/models')
 const { defaultEquals } = require('../utils/utils')
 const LinkedList = require('./LinkedList')

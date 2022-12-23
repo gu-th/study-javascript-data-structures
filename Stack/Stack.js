@@ -1,3 +1,11 @@
+/*
+ * @Author       : guth
+ * @Date         : 2022-12-22 17:32:21
+ * @LastEditors  : guth
+ * @LastEditTime : 2022-12-23 11:00:00
+ * @FilePath     : /study-javascript-data-structures/Stack/Stack.js
+ * @Description  : 栈-后进先出 （对象实现方式）
+ */
 /**
  * 栈：后进先出 此处是对象的实现方式
  */ 

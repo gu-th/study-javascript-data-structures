@@ -1,3 +1,11 @@
+/*
+ * @Author       : guth
+ * @Date         : 2022-12-22 17:32:21
+ * @LastEditors  : guth
+ * @LastEditTime : 2022-12-23 10:58:53
+ * @FilePath     : /study-javascript-data-structures/List/LinkedList.js
+ * @Description  : 链表实现
+ */
 const { Node } = require('../utils/models')
 const { defaultEquals } = require('../utils/utils')
 

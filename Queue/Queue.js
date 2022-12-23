@@ -1,3 +1,11 @@
+/*
+ * @Author       : guth
+ * @Date         : 2022-12-22 17:32:21
+ * @LastEditors  : guth
+ * @LastEditTime : 2022-12-23 10:59:40
+ * @FilePath     : /study-javascript-data-structures/Queue/Queue.js
+ * @Description  : 队列：先进先出
+ */
 /**
  * 队列: 先进先出
  */

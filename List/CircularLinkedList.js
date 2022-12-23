@@ -1,3 +1,11 @@
+/*
+ * @Author       : guth
+ * @Date         : 2022-12-22 17:32:21
+ * @LastEditors  : guth
+ * @LastEditTime : 2022-12-23 10:57:39
+ * @FilePath     : /study-javascript-data-structures/List/CircularLinkedList.js
+ * @Description  : 单向循环链表, 链表最后一个元素next指针 指向链表第一个元素head
+ */
 const { Node } = require('../utils/models')
 const { defaultEquals } = require('../utils/utils')
 const LinkedList = require('./LinkedList')

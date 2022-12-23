@@ -1,3 +1,11 @@
+/*
+ * @Author       : guth
+ * @Date         : 2022-12-23 09:34:09
+ * @LastEditors  : guth
+ * @LastEditTime : 2022-12-23 10:59:13
+ * @FilePath     : /study-javascript-data-structures/Queue/Deque.js
+ * @Description  : 双端队列 结合了队列和栈的方法
+ */
 const Queue = require('./Queue')
 /**
  * 双端队列: 结合了队列和栈的方法
