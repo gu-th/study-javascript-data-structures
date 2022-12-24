@@ -29,7 +29,24 @@ function defaultCompare(a, b) {
   return a < b ? COMPARE.LESS_THAN : COMPARE.BIGGER_THAN
 }
 
+/**
+ * 返回字符串
+ * @param {*} item 
+ * @returns {String}
+ */
+function defaultToString(item) {
+  if (item === null) {
+    return 'NULL'
+  } else if (item === undefined) {
+    return 'UNDEFINED'
+  } else if (typeof item === 'string' || item instanceof String) {
+    return `${item}`
+  }
+  return item.toString()
+}
+
 module.exports = {
   defaultEquals,
-  defaultCompare
+  defaultCompare,
+  defaultToString
 }
