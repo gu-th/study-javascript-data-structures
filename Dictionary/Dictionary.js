@@ -4,7 +4,7 @@
  * @LastEditors  : guth
  * @LastEditTime : 2022-12-24 12:27:23
  * @FilePath     : /study-javascript-data-structures/Dictionary/Dictionary.js
- * @Description  : 字典 相当于es5中的Map
+ * @Description  : 8.1字典实现 相当于es5中的Map
  */
 
 const { ValuePair } = require('../utils/models')
