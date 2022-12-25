@@ -12,6 +12,11 @@
 
 ```
 study-javascript-data-structures
+├─ Dictionary
+│  ├─ Dictionary.js - 字典
+│  ├─ HashTable.js - 散列表
+│  ├─ HashTableLinearProbing.js - 散列表（线性探寻法避免hash冲突）
+│  ├─ HashTableSeparateChaining.js - 散列表（分离链接法避免hash冲突）
 ├─ List
 │  ├─ CircularLinkedList.js - 单向循环链表
 │  ├─ DoublyLinkedList.js - 双向链表
