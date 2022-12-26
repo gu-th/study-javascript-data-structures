@@ -1,8 +1,8 @@
-/**
+/*
  * @Author       : guth
  * @Date         : 2022-12-22 17:32:21
  * @LastEditors  : guth
- * @LastEditTime : 2022-12-23 11:00:48
+ * @LastEditTime : 2022-12-26 19:12:03
  * @FilePath     : /study-javascript-data-structures/utils/models.js
  * @Description  : 公共类文件
  */
@@ -36,8 +36,20 @@ class ValuePair {
     return `${this.key}: ${this.value}`
   }
 }
+
+/**
+ * 树节点类
+ */
+class TreeNode {
+  constructor(key) {
+    this.key = key
+    this.left = null
+    this.right = null
+  }
+}
 module.exports = {
   Node,
   DoublyNode,
-  ValuePair
+  ValuePair,
+  TreeNode
 }
