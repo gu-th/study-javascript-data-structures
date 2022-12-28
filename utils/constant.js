@@ -23,7 +23,16 @@ const BALANCE_FACTOR = {
   UNBALANCED_LEFT: 5,
 }
 
+/**
+ * 颜色（用于标注节点颜色）
+ */
+const COLORS = {
+  RED: 'red',
+  BLACK: 'black'
+}
+
 module.exports = {
   COMPARE,
-  BALANCE_FACTOR
+  BALANCE_FACTOR,
+  COLORS
 }
