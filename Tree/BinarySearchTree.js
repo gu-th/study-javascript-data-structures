@@ -2,7 +2,7 @@
  * @Author       : guth
  * @Date         : 2022-12-25 14:57:22
  * @LastEditors  : guth
- * @LastEditTime : 2022-12-26 19:11:17
+ * @LastEditTime : 2022-12-27 12:53:47
  * @FilePath     : /study-javascript-data-structures/Tree/BinarySearchTree.js
  * @Description  : 10.3 二叉搜索树
  */
@@ -218,6 +218,8 @@ class BinarySearchTree {
     }
   }
 }
+
+module.exports = BinarySearchTree
 
 function test() {
   const tree = new BinarySearchTree()
