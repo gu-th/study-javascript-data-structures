@@ -2,10 +2,13 @@
  * @Author       : guth
  * @Date         : 2022-12-22 17:32:21
  * @LastEditors  : guth
- * @LastEditTime : 2022-12-26 19:12:03
+ * @LastEditTime : 2022-12-28 09:48:21
  * @FilePath     : /study-javascript-data-structures/utils/models.js
  * @Description  : 公共类文件
  */
+
+const { COLORS } = require('./constant')
+
 /**
  * 节点类 （用于栈、队列）
  */
@@ -47,9 +50,22 @@ class TreeNode {
     this.right = null
   }
 }
+
+class RedBlackTreeNode extends TreeNode {
+  constructor(key, color = COLORS.RED, parent = null) {
+    super(key)
+    this.color = color
+    this.parent = parent
+  }
+  isRed() {
+    return this.color === COLORS.RED
+  }
+}
+
 module.exports = {
   Node,
   DoublyNode,
   ValuePair,
-  TreeNode
+  TreeNode,
+  RedBlackTreeNode
 }
