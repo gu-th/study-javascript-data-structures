@@ -135,3 +135,5 @@ class Dictionary {
     return objStr
   }
 }
+
+module.exports = Dictionary
