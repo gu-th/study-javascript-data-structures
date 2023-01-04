@@ -1,23 +1,14 @@
-const Queue = require('../Queue/Queue')
-const COLOR = {
-  // 白色 该顶点还未被访问
-  WHITE: 0,
-  // 灰色 该顶点被访问过，但并未被探索过
-  GREY: 1,
-  // 黑色 该顶点被访问过且被完全探索过
-  BLACK: 2,
-}
-
-/**
- * 初始化每个节点的颜色
- * @param {*} vertices
- * @returns color
+/*
+ * @Author       : guth
+ * @Date         : 2023-01-03 15:14:31
+ * @LastEditors  : guth
+ * @LastEditTime : 2023-01-04 14:05:50
+ * @FilePath     : /study-javascript-data-structures/Graph/BFS.js
+ * @Description  : 广度优先搜索实现
  */
-const initializeColor = (vertices) => {
-  const color = {}
-  vertices.forEach((v) => (color[v] = COLOR.WHITE))
-  return color
-}
+const Queue = require('../Queue/Queue')
+const { COLOR } = require('../utils/constant')
+const { initializeColor } = require('../utils/utils')
 
 /**
  *
