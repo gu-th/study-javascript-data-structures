@@ -24,15 +24,28 @@ const BALANCE_FACTOR = {
 }
 
 /**
- * 颜色（用于标注节点颜色）
+ * 颜色（用于标注红黑树节点颜色）
  */
-const COLORS = {
+const RBCOLOR = {
   RED: 'red',
   BLACK: 'black'
+}
+
+/**
+ * 标注图顶点
+ */
+const COLOR = {
+  // 白色 该顶点还未被访问
+  WHITE: 0,
+  // 灰色 该顶点被访问过，但并未被探索过
+  GREY: 1,
+  // 黑色 该顶点被访问过且被完全探索过
+  BLACK: 2,
 }
 
 module.exports = {
   COMPARE,
   BALANCE_FACTOR,
-  COLORS
+  RBCOLOR,
+  COLOR
 }
