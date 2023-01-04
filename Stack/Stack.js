@@ -114,3 +114,5 @@ function baseConverter(num, base) {
 }
 
 console.log(baseConverter(10, 16));
+
+module.exports = Stack
