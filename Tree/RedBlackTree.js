@@ -2,7 +2,7 @@
  * @Author       : guth
  * @Date         : 2022-12-28 09:35:51
  * @LastEditors  : guth
- * @LastEditTime : 2022-12-28 17:35:54
+ * @LastEditTime : 2023-01-04 14:05:16
  * @FilePath     : /study-javascript-data-structures/Tree/RedBlackTree.js
  * @Description  : 红黑树实现 (红黑树也是自平衡搜索二叉树)
  *
@@ -15,7 +15,7 @@
  * （6）从给定的节点到它的后代节点（NULL叶节点）的所有路径包含相同数量的黑色节点
  */
 
-const { COLORS, COMPARE } = require('../utils/constant')
+const { RBCOLOR, COMPARE } = require('../utils/constant')
 const { RedBlackTreeNode } = require('../utils/models')
 const { defaultCompare } = require('../utils/utils')
 const BinarySearchTree = require('./BinarySearchTree')
@@ -29,7 +29,7 @@ class RedBlackTree extends BinarySearchTree {
 
   insert(key) {
     if (this.root == null) {
-      this.root = new RedBlackTreeNode(key, COLORS.BLACK)
+      this.root = new RedBlackTreeNode(key, RBCOLOR.BLACK)
     } else {
       const node = this.inserNode(this.root, key)
       this.fixTreePropreties(node)
@@ -45,13 +45,13 @@ class RedBlackTree extends BinarySearchTree {
   inserNode(node, key) {
     if (this.compareFn(key, node.key) === COMPARE.LESS_THAN) {
       if (node.left == null) {
-        node.left = new RedBlackTreeNode(key, COLORS.BLACK, node)
+        node.left = new RedBlackTreeNode(key, RBCOLOR.BLACK, node)
         return node.left
       } else {
         this.inserNode(node.left, key)
       }
     } else if (node.right == null) {
-      node.right = new RedBlackTreeNode(key, COLORS.BLACK, node)
+      node.right = new RedBlackTreeNode(key, RBCOLOR.BLACK, node)
       return node.right
     } else {
       this.inserNode(node.right, key)
@@ -74,9 +74,9 @@ class RedBlackTree extends BinarySearchTree {
         const uncel = grandParent.right
         // 叔叔节点是红的 只需要重写填色即可
         if (uncel && uncel.isRed()) {
-          grandParent.color = COLORS.RED
-          parent.color = COLORS.BLACK
-          uncel.color = COLORS.BLACK
+          grandParent.color = RBCOLOR.RED
+          parent.color = RBCOLOR.BLACK
+          uncel.color = RBCOLOR.BLACK
           node = grandParent
         } else {
           // 节点是右侧子节点 - 左旋转
@@ -88,8 +88,8 @@ class RedBlackTree extends BinarySearchTree {
 
           // 节点是左侧子节点 - 右旋转
           this.rotationLL(grandParent)
-          parent.color = COLORS.BLACK
-          grandParent.color = COLORS.RED
+          parent.color = RBCOLOR.BLACK
+          grandParent.color = RBCOLOR.RED
           node = parent
         }
       }
@@ -99,9 +99,9 @@ class RedBlackTree extends BinarySearchTree {
         const uncle = grandParent.left
         // 叔叔节点是红的，只需重新填色即可
         if (uncle && uncle.isRed()) {
-          grandParent.color = COLORS.RED
-          parent.color = COLORS.BLACK
-          uncle.color = COLORS.BLACK
+          grandParent.color = RBCOLOR.RED
+          parent.color = RBCOLOR.BLACK
+          uncle.color = RBCOLOR.BLACK
           node = grandParent
         } else {
           // 节点是左子节点 - 右旋转
@@ -114,13 +114,13 @@ class RedBlackTree extends BinarySearchTree {
           // 节点是右子节点 - 左旋转
           this.rotationRR(grandParent)
           // 交换颜色
-          parent.color = COLORS.BLACK
-          grandParent.color = COLORS.RED
+          parent.color = RBCOLOR.BLACK
+          grandParent.color = RBCOLOR.RED
           node = parent
         }
       }
     }
-    this.root.color = COLORS.BLACK
+    this.root.color = RBCOLOR.BLACK
   }
 
   /**
