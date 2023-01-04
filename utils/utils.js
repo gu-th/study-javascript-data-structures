@@ -31,7 +31,7 @@ function defaultCompare(a, b) {
 
 /**
  * 返回字符串
- * @param {*} item 
+ * @param {*} item
  * @returns {String}
  */
 function defaultToString(item) {
@@ -45,8 +45,20 @@ function defaultToString(item) {
   return item.toString()
 }
 
+/**
+ * 初始化每个节点的颜色
+ * @param {*} vertices
+ * @returns color
+ */
+const initializeColor = (vertices) => {
+  const color = {}
+  vertices.forEach((v) => (color[v] = COLOR.WHITE))
+  return color
+}
+
 module.exports = {
   defaultEquals,
   defaultCompare,
-  defaultToString
+  defaultToString,
+  initializeColor,
 }
