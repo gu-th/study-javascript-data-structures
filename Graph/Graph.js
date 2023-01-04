@@ -2,12 +2,11 @@
 * @Author       : guth
 * @Date         : 2022-12-31 22:22:28
  * @LastEditors  : guth
- * @LastEditTime : 2023-01-01 09:10:21
+ * @LastEditTime : 2023-01-04 11:24:06
  * @FilePath     : /study-javascript-data-structures/Graph/Graph.js
 * @Description  : 图的邻接表实现
 */
 const Dictionary = require("../Dictionary/Dictionary")
-
 class Graph {
   constructor(isDirected = false) {
     // 图是否有向，默认无向
@@ -80,24 +79,4 @@ class Graph {
     return str
   }
 }
-
-
-function test () {
-  const graph = new Graph()
-  const vertices = ['A','B','C','D','E','F','G','H','I']
-  vertices.forEach(v => graph.addVertex(v))
-  graph.addEdge('A', 'B')
-  graph.addEdge('A', 'C')
-  graph.addEdge('A', 'D')
-  graph.addEdge('C', 'D')
-  graph.addEdge('C', 'G')
-  graph.addEdge('D', 'G')
-  graph.addEdge('D', 'H')
-  graph.addEdge('B', 'E')
-  graph.addEdge('B', 'F')
-  graph.addEdge('E', 'I')
-
-  console.log(graph.toString());
-}
-
-test()
+module.exports = Graph
