@@ -2,7 +2,7 @@
  * @Author       : guth
  * @Date         : 2023-01-04 14:02:09
  * @LastEditors  : guth
- * @LastEditTime : 2023-01-04 15:44:18
+ * @LastEditTime : 2023-01-04 16:14:50
  * @FilePath     : /study-javascript-data-structures/Graph/DFS.js
  * @Description  : 深度优先搜索实现
  */
@@ -83,4 +83,10 @@ const DFSVisit = (u, color, d, f, p, time, adjList) => {
   })
   color[u] = COLOR.BLACK
   f[u] = ++time.count
+}
+
+
+module.exports = {
+  depthFirthSearch,
+  DFS
 }
