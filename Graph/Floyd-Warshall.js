@@ -2,9 +2,9 @@
  * @Author       : guth
  * @Date         : 2023-01-09 16:00:59
  * @LastEditors  : guth
- * @LastEditTime : 2023-01-09 16:21:54
+ * @LastEditTime : 2023-01-10 09:44:35
  * @FilePath     : /study-javascript-data-structures/Graph/Floyd-Warshall.js
- * @Description  : Floyd-Warshall 算法实现
+ * @Description  : Floyd-Warshall实现 一种计算图中所有最短路径的动态规划算法
  */
 /**
  *               4
