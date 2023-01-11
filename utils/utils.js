@@ -55,10 +55,23 @@ const initializeColor = (vertices) => {
   vertices.forEach((v) => (color[v] = COLOR.WHITE))
   return color
 }
+/**
+ * 交换数组两个坐标的值
+ * @param {Array} array
+ * @param {Number} a
+ * @param {Number} b
+ */
+function swap(array, a, b) {
+  // [array[a], array[b]] = [array[b], array[a]]
+  const temp = array[a]
+  array[a] = array[b]
+  array[b] = temp
+}
 
 module.exports = {
   defaultEquals,
   defaultCompare,
   defaultToString,
   initializeColor,
+  swap
 }
