@@ -2,11 +2,11 @@
  * @Author       : guth
  * @Date         : 2023-01-04 16:18:09
  * @LastEditors  : guth
- * @LastEditTime : 2023-01-04 17:20:12
- * @FilePath     : /study-javascript-data-structures/Graph/Dijkstra.js
- * @Description  : Dijkstra
+ * @LastEditTime : 2023-01-11 16:58:28
+ * @FilePath     : /study-javascript-data-structures/Graph/dijkstra.js
+ * @Description  : dijkstra
  *
- * Dijkstra 算法 是一种计算从单个源到所有其他源的最短路径的贪心算法
+ * dijkstra 算法 是一种计算从单个源到所有其他源的最短路径的贪心算法
  * 我们可以用它计算从图的一个顶点到其余各顶点的最短路径
  */
 
