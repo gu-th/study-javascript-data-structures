@@ -2,7 +2,7 @@
  * @Author       : guth
  * @Date         : 2023-01-12 16:48:07
  * @LastEditors  : guth
- * @LastEditTime : 2023-01-13 15:11:36
+ * @LastEditTime : 2023-01-13 15:31:27
  * @FilePath     : /study-javascript-data-structures/algorithms/sort/quickSort.js
  * @Description  : 快速排序实现 复杂度 O(nlog(n))
  *
@@ -61,7 +61,3 @@ function partition(arr, left, right, compareFn) {
   }
   return i
 }
-
-console.log(
-  quickSort([5,9,1,3,2,4,8,6, -5])
-);
