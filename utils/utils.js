@@ -68,10 +68,42 @@ function swap(array, a, b) {
   array[b] = temp
 }
 
+/**
+ * 返回数组的最大值
+ * @param {array<number>} arr 
+ * @returns 
+ */
+function findMaxValue(arr) {
+  let max = arr[0]
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > max) {
+      max = arr[i]
+    }
+  }
+  return max
+}
+/**
+ * 返回数组的最小值
+ * @param {array<number>} arr 
+ * @returns 
+ */
+function findMinValue(arr) {
+  let min = arr[0]
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] < min) {
+      min = arr[i]
+    }
+  }
+  return min
+}
+
+
 module.exports = {
   defaultEquals,
   defaultCompare,
   defaultToString,
   initializeColor,
-  swap
+  swap,
+  findMaxValue,
+  findMinValue
 }
