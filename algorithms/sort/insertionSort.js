@@ -2,9 +2,9 @@
  * @Author       : guth
  * @Date         : 2023-01-11 14:45:00
  * @LastEditors  : guth
- * @LastEditTime : 2023-01-13 15:30:33
+ * @LastEditTime : 2023-01-13 16:41:40
  * @FilePath     : /study-javascript-data-structures/algorithms/sort/insertionSort.js
- * @Description  : 插入排序
+ * @Description  : 插入排序 排序小数组不错的算法
  *                 第一项和第二项作比较, 放在原位或插在前面, 再和第三项作比较,以次类推
  */
 
@@ -28,3 +28,6 @@ function insertionSort(arr, compareFn = defaultCompare) {
   }
   return arr
 }
+
+
+module.exports = insertionSort
