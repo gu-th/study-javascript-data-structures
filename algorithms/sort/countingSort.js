@@ -2,13 +2,15 @@
  * @Author       : guth
  * @Date         : 2023-01-13 15:42:02
  * @LastEditors  : guth
- * @LastEditTime : 2023-01-13 16:09:26
+ * @LastEditTime : 2023-01-13 17:08:00
  * @FilePath     : /study-javascript-data-structures/algorithms/sort/countingSort.js
  * @Description  : 计数排序  是一种分布式排序 时间复杂度O(n+k) k 是临时计数数组的大小
  *  计数排序是一个 整数排序算法
  *  计数排序使用一个存储每个元素原始数组出现次数的临时数组
  *  在所有元素计数完成后, 临时数组已排好序并可迭代以构建排序后的结果数组
  */
+
+const { findMaxValue } = require("../../utils/utils")
 
 function countingSort(arr) {
   if (arr.length < 2) {
@@ -37,15 +39,4 @@ function countingSort(arr) {
     }
   })
   return arr
-}
-
-// 找最大值
-function findMaxValue(arr) {
-  let max = arr[0]
-  for (let i = 1; i < arr.length; i++) {
-    if (arr[i] > max) {
-      max = arr[i]
-    }
-  }
-  return max
 }
