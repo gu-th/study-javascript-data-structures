@@ -12,6 +12,10 @@ const COMPARE = {
   BIGGER_THAN: 1,
   EQUALS: 0
 }
+/**
+ * 不存在
+ */
+const DOES_NOT_EXIST = -1
 
 /**
  * AVL树平衡因子
@@ -48,5 +52,6 @@ module.exports = {
   COMPARE,
   BALANCE_FACTOR,
   RBCOLOR,
-  COLOR
+  COLOR,
+  DOES_NOT_EXIST
 }
