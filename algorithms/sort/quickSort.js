@@ -2,7 +2,7 @@
  * @Author       : guth
  * @Date         : 2023-01-12 16:48:07
  * @LastEditors  : guth
- * @LastEditTime : 2023-01-13 15:31:27
+ * @LastEditTime : 2023-01-16 16:47:38
  * @FilePath     : /study-javascript-data-structures/algorithms/sort/quickSort.js
  * @Description  : 快速排序实现 复杂度 O(nlog(n))
  *
@@ -45,11 +45,11 @@ function partition(arr, left, right, compareFn) {
   let j = right
   while (i <= j) {
     // 左指针找到比主元大的坐标
-    if (compareFn(arr[i], pivot) === COMPARE.LESS_THAN) {
+    while (compareFn(arr[i], pivot) === COMPARE.LESS_THAN) {
       i++
     }
     // 右指针找比主元小的坐标
-    if (compareFn(arr[j], pivot) === COMPARE.BIGGER_THAN) {
+    while (compareFn(arr[j], pivot) === COMPARE.BIGGER_THAN) {
       j--
     }
     // 交换左右指针值，比主元小的在左，比主元大的在右侧
@@ -61,3 +61,5 @@ function partition(arr, left, right, compareFn) {
   }
   return i
 }
+
+module.exports = quickSort
