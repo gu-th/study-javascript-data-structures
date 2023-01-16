@@ -97,6 +97,18 @@ function findMinValue(arr) {
   return min
 }
 
+/**
+ * 小于或相等
+ * @param {*} a 
+ * @param {*} b 
+ * @param {*} compareFn 
+ * @returns 
+ */
+function lesserOrEquals(a, b ,compareFn) {
+  const comp = compareFn(a, b)
+  return comp === COMPARE.LESS_THAN || comp === COMPARE.EQUALS
+}
+
 
 module.exports = {
   defaultEquals,
@@ -105,5 +117,6 @@ module.exports = {
   initializeColor,
   swap,
   findMaxValue,
-  findMinValue
+  findMinValue,
+  lesserOrEquals
 }
