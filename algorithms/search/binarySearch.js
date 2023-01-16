@@ -2,14 +2,14 @@
  * @Author       : guth
  * @Date         : 2023-01-16 16:35:06
  * @LastEditors  : guth
- * @LastEditTime : 2023-01-16 16:58:56
+ * @LastEditTime : 2023-01-16 17:02:37
  * @FilePath     : /study-javascript-data-structures/algorithms/search/binarySearch.js
  * @Description  : 二分搜索
  *
  * 二分搜索需要先将数组排序，然后选择中间值，搜索值比中间值小，则在左侧继续寻找，
  * 搜索值比中间值大，则在右侧继续寻找，直至选中值为搜索值
  */
-const { COMPARE } = require('../../utils/constant')
+const { COMPARE, DOES_NOT_EXIST } = require('../../utils/constant')
 const { defaultCompare, lesserOrEquals } = require('../../utils/utils')
 const quickSort = require('../sort/quickSort')
 
@@ -29,6 +29,6 @@ function binarySearch(arr, value, compareFn = defaultCompare) {
       return mid
     }
   }
-  return mid
+  return DOES_NOT_EXIST
 }
 
