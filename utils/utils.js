@@ -70,8 +70,8 @@ function swap(array, a, b) {
 
 /**
  * 返回数组的最大值
- * @param {array<number>} arr 
- * @returns 
+ * @param {array<number>} arr
+ * @returns
  */
 function findMaxValue(arr) {
   let max = arr[0]
@@ -84,8 +84,8 @@ function findMaxValue(arr) {
 }
 /**
  * 返回数组的最小值
- * @param {array<number>} arr 
- * @returns 
+ * @param {array<number>} arr
+ * @returns
  */
 function findMinValue(arr) {
   let min = arr[0]
@@ -99,16 +99,37 @@ function findMinValue(arr) {
 
 /**
  * 小于或相等
- * @param {*} a 
- * @param {*} b 
- * @param {*} compareFn 
- * @returns 
+ * @param {*} a
+ * @param {*} b
+ * @param {*} compareFn
+ * @returns
  */
-function lesserOrEquals(a, b ,compareFn) {
+function lesserOrEquals(a, b, compareFn) {
   const comp = compareFn(a, b)
   return comp === COMPARE.LESS_THAN || comp === COMPARE.EQUALS
 }
 
+/**
+ * 大于或等于
+ * @param {*} a
+ * @param {*} b
+ * @param {*} compareFn
+ * @returns
+ */
+function biggerOrEquals(a, b, compareFn) {
+  const comp = compareFn(a, b)
+  return comp === COMPARE.BIGGER_THAN || comp === COMPARE.EQUALS
+}
+
+/**
+ * 返回两数差
+ * @param {*} a 
+ * @param {*} b 
+ * @returns {Number}
+ */
+function defaultDiff(a, b) {
+  return Number(a) - Number(b);
+}
 
 module.exports = {
   defaultEquals,
@@ -118,5 +139,7 @@ module.exports = {
   swap,
   findMaxValue,
   findMinValue,
-  lesserOrEquals
+  lesserOrEquals,
+  biggerOrEquals,
+  defaultDiff,
 }
