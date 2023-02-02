@@ -5,31 +5,77 @@
 
 书中代码地址 https://github.com/PacktPublishing/Learning-JavaScript-Data-Structures-and-Algorithms-Third-Edition
 
-
 ```
 study-javascript-data-structures
+├─ algorithms
+│  ├─ backtracking
+│  │  ├─ ratInAMaze.js
+│  │  ├─ README.md
+│  │  └─ sudo.js
+│  ├─ dynamicProgramming
+│  │  ├─ knapSack.js
+│  │  ├─ lcs.js
+│  │  ├─ minCoinChange.js
+│  │  └─ README.md
+│  ├─ greedy
+│  │  ├─ knapSack.js
+│  │  ├─ minCoinChange.js
+│  │  └─ README.md
+│  ├─ search
+│  │  ├─ binarySearch.js
+│  │  ├─ binarySearchRecursive.js
+│  │  ├─ insertpolationSearch.js
+│  │  └─ sequentialSearch.js
+│  └─ sort
+│     ├─ bubbleSort.js
+│     ├─ bucketSort.js
+│     ├─ countingSort.js
+│     ├─ insertionSort.js
+│     ├─ mergeSort.js
+│     ├─ quickSort.js
+│     ├─ radixSort.js
+│     ├─ READEME.md
+│     └─ selectionSort.js
+├─ BinaryHeap
+│  ├─ MaxHeap.js
+│  ├─ MinHeap.js
+│  └─ README.md
 ├─ Dictionary
-│  ├─ Dictionary.js - 字典
-│  ├─ HashTable.js - 散列表
-│  ├─ HashTableLinearProbing.js - 散列表（线性探寻法避免hash冲突）
-│  ├─ HashTableSeparateChaining.js - 散列表（分离链接法避免hash冲突）
+│  ├─ Dictionary.js
+│  ├─ HashTable.js
+│  ├─ HashTableLinearProbing.js
+│  └─ HashTableSeparateChaining.js
+├─ Graph
+│  ├─ BFS.js
+│  ├─ DFS.js
+│  ├─ Dijkstra.js
+│  ├─ floydWarshall.js
+│  ├─ Graph.js
+│  ├─ Prim.js
+│  ├─ README.md
+│  └─ test.js
 ├─ List
-│  ├─ CircularLinkedList.js - 单向循环链表
-│  ├─ DoublyLinkedList.js - 双向链表
-│  └─ LinkedList.js - 单向链表
-│  └─ SortedLinkedList.js - 有序链表
-│  └─ StackLinkedList.js - 栈的链表实现
+│  ├─ CircularLinkedList.js
+│  ├─ DoublyLinkedList.js
+│  ├─ LinkedList.js
+│  ├─ SortedLinkedList.js
+│  └─ StackLinkedList.js
 ├─ Queue
-│  ├─ Deque.js - 双向队列
-│  └─ Queue.js - 单向队列
-├─ Set
-│  └─ Set.js - 集合
+│  ├─ Deque.js
+│  └─ Queue.js
 ├─ README.md
+├─ Set
+│  └─ Set.js
 ├─ Stack
-│  ├─ Stack.js - 栈 （对象实现）
-│  └─ StackArray.js 栈（数组实现）
+│  ├─ Stack.js
+│  └─ StackArray.js
+├─ Tree
+│  ├─ AVLTree.js
+│  ├─ BinarySearchTree.js
+│  └─ RedBlackTree.js
 └─ utils
-   ├─ models.js - 公共类
-   └─ utils.js - 通用工具函数
+   ├─ constant.js
+   ├─ models.js
+   └─ utils.js
 
 ```
